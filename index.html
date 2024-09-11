@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<style>
+		#anime{width:680px; height: 480px; display: block;}
+		body{background: red;}
+		#mytext{font-size: 4rem;}
+	</style>
+
+</head>
+<body>
+	<video src="video.mp4" id="anime" controls></video>
+	<button id="but">play</button>
+	<div id="mytext">동영상이 시작되지 않습니다.</div>
+	
+	<script type="text/javascript">
+		let playstate = "stop"
+		but.onclick = function(){
+			if(playstate == "stop"){
+				anime.play();
+				but.innerHTML = "play";
+				but.style.background = "red";
+				playstate = "play";
+			}else if(playstate == "play"){
+				anime.pause();
+				but.innerHTML = "stop";
+				but.style.background = "blue";
+				playstate = "stop";
+			}
+	}
+	</script>
+</body>
+
+</html>
